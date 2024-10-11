@@ -1,0 +1,362 @@
+.torrentTableContainer {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 56px);
+  width: 100%;
+  margin-right: 0;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.torrentTable {
+  flex: 1;
+  max-width: 100%;
+  padding: 20px;
+  background: linear-gradient(180deg, #0D0D14 0%, #1A1A1A 41.5%);
+  overflow-x: auto;
+  overflow-y: auto;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.torrentTableContent {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: auto;
+  position: relative;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 4px;
+  table-layout: fixed;
+}
+
+.th, .td {
+  padding: 10px 12px;
+  height: 19px;
+  line-height: 19px;
+  vertical-align: middle;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.th {
+  color: var(--transparent-white-20070, rgba(255, 255, 255, 0.70));
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  position: relative;
+}
+
+.td {
+  color: #FFF;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.progressContainer {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progressBar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.downloadingBar {
+    background-color: rgba(248, 182, 83, 1);
+}
+
+.seedingBar {
+    background-color: #48B06D;
+}
+
+.completedBar {
+    background-color: #3A2DD2;
+}
+
+.errorBar {
+    background-color: #DA002F;
+}
+
+.progressText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white, #FFF);
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    z-index: 0;
+}
+
+.th {
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.resizeHandle {
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50%;
+    width: 10px;
+    cursor: e-resize;
+    user-select: none;
+}
+
+.resizeHandle::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 4px;
+    width: 2px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.resizeHandle:hover::after {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 4px;
+    table-layout: fixed;
+}
+
+.torrentTable {
+    overflow-x: auto;
+    width: 100%;
+    position: relative;
+}
+
+.torrentTable::after {
+    content: '';
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, rgba(26, 26, 26, 0) 0%, rgba(26, 26, 26, 1) 100%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.rightAlign {
+    text-align: right;
+}
+
+.th.rightAlign {
+    text-align: right;
+}
+
+.sortIcon {
+    margin-left: 5px;
+    font-size: 0.8em;
+    vertical-align: middle;
+}
+
+.th {
+    cursor: pointer;
+}
+
+.infinityIcon {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.torrentRow {
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.torrentRow:hover {
+    border-radius: 8px;
+    background: var(--transparent-white-9005, rgba(255, 255, 255, 0.1));
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+}
+
+.torrentRow td:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.torrentRow td:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.selectedRow {
+    background: var(--transparent-white-9005, rgba(255, 255, 255, 0.1));
+}
+
+.contextMenu {
+    position: absolute;
+    background-color: #333;
+    padding: 4px;
+    border-radius: 10px;
+    z-index: 1000;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.noResultsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.noResultsImage {
+    height: 160px;
+    margin-bottom: 16px;
+}
+
+.noResultsTitle {
+    color: #FFFFFF;
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 8px;
+}
+
+.noResultsSubtitle {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.filterSignifier {
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.1);
+  color: #B3B3B3;
+  text-overflow: ellipsis;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.filterTag {
+  background-color: #4D4D4D;
+  color: #E6E6E6;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-left: 8px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.tableHeaderContainer {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  border-radius: 12px 12px 0 0;
+}
+
+.tableHeaderContainer table {
+  width: 100%;
+}
+
+.tableHeaderContainer th {
+  background: transparent;
+}
+
+.tableBodyContainer {
+  overflow-y: auto;
+  height: calc(100% - 56px);
+  position: relative;
+}
+
+.tableBodyContainer::before {
+  content: '';
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: linear-gradient(to bottom, #1A1A1A, rgba(26, 26, 26, 0));
+  pointer-events: none;
+  z-index: 1;
+}
+
+.speedContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.speedIndicator {
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+.speedUp {
+  color: #48B06D;
+}
+
+.speedDown {
+  color: #F2200D;
+}
+
+.torrentTable::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+.torrentTable::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+.torrentTable::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  border: 3px solid rgba(26, 26, 26, 0.7);
+}
+
+.torrentTable::-webkit-scrollbar-corner {
+  background: transparent;
+}

@@ -1,0 +1,41 @@
+{
+  "name": "qbittorrent-api",
+  "version": "1.0.0",
+  "description": "Wrapper around qBittorrent's API to manage your torrents from Node. Documented and everything.",
+  "keywords": [
+    "qbittorrent",
+    "bittorrent",
+    "torrent",
+    "client",
+    "interface"
+  ],
+  "license": "MPL-2.0",
+  "author": {
+    "name": "vonthar",
+    "email": "vonthar@hotmail.com"
+  },
+  "homepage": "https://github.com/vonthar/node-qbittorrent-api",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vonthar/node-qbittorrent-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vonthar/node-qbittorrent-api/issues"
+  },
+  "main": "src/qbt.js",
+  "scripts": {
+    "test": "node test/qbt-tests.js",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "async": "^1.5.2",
+    "ht": "0.0.2",
+    "isstream": "^0.1.2",
+    "request": "^2.72.0",
+    "xtend": "^4.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^2.11.1",
+    "eslint-config-google": "^0.5.0"
+  }
+}

@@ -1,0 +1,73 @@
+.contextMenu {
+    position: absolute;
+    background-color: #333;
+    padding: 4px;
+    border-radius: 10px;
+    z-index: 1000;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transform-origin: top left;
+}
+
+.menuItem {
+    cursor: pointer;
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+}
+
+.menuItem:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.fadeIn {
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+.fadeOut {
+    animation: fadeOut 0.2s ease-in-out;
+}
+
+.menuItem i {
+    font-size: 16px;
+}
+
+.openExplorer {
+    color: white;
+}
+
+.removeTorrent {
+    color: #F2200D;
+}
+
+.removeTorrent i {
+    color: #F2200D;
+}
+
+.stopTorrent {
+  color: #F8B653;
+}
+
+.stopTorrent i {
+  color: #F8B653;
+}

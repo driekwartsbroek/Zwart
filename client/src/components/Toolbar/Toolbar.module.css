@@ -1,0 +1,149 @@
+.toolbar {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    height: 56px;
+    background-color: #1A1A1A;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    z-index: 1001;
+    box-sizing: border-box;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+  
+  .toolbar i {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+    margin-right: 16px;
+    cursor: pointer;
+  }
+  
+  .toolbar i:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+  
+.userIconContainer {
+  position: relative;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.userIconContainer:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.username {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #2A2A2A;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+}
+
+.submenuItem {
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.7);
+  transition: background-color 0.2s ease;
+}
+
+.submenuItem:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.submenuItem i {
+  margin-right: 8px;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin: 0 auto;
+  cursor: text;
+  transition: all 0.3s ease;
+}
+
+.searchInput {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+.searchInput::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.searchInput.active,
+.searchInput:focus {
+  width: 200px;
+}
+
+.clearButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.clearButton i {
+  color: #F2200D;
+  font-size: 16px;
+}
+
+.clearButton:hover i {
+  color: #B8180A;
+}
+
+.searchContainer {
+  position: relative;
+}
+
+.searchInput.active {
+  padding-right: 32px;
+}
+
+.searchIcon {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.searchIcon:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.searchContainer {
+  margin-left: auto;
+}
